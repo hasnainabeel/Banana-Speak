@@ -1,0 +1,1 @@
+var textSelector = document.querySelector();
