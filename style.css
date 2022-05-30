@@ -4,6 +4,10 @@
     --primary-color: #f4dd48;
     --secondary-color: #f6c616;
 }
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
 
 html, body {
     font-family: 'Montserrat', sans-serif;
@@ -13,42 +17,16 @@ html, body {
     background-size: cover;
 }
 
+main {
+    flex-grow: 1;
+}
+
 .container {
     padding: 0rem 3rem;
 }
 .container-center {
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
-}
-
-#inputText {
-    width: 100%;
-    padding: 0.5rem 0rem 0rem 0.5rem;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    background: rgba(0, 0, 0, 0.4);
-    font-weight: bolder;
-    color: white;
-}
-
-.output {
-    border: 2px solid black;
-    height: 120px;
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.5rem 0rem 0rem 0.5rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    font-weight: bolder;
-    color: white;
-}
-
-#translate-btn {
-    padding: 0.5rem;
-    font-size: larger;
-    background-color: var(--primary-color);
-    border-color: var(--secondary-color);
-    margin-top: 1rem;
 }
 
 nav h1 {
@@ -64,4 +42,55 @@ nav {
     top: 0;
     padding: 1rem;
     margin-bottom: 3rem;
+}
+
+p {
+    padding: 1rem 0 1rem 0;
+}
+
+#inputText {
+    width: 100%;
+    padding: 0.5rem 0rem 0rem 0.5rem;
+    border: 2px solid black;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background: rgba(255, 230, 0, 0.44);
+    font-weight: bolder;
+}
+
+.output {
+    border: 2px solid black;
+    height: 120px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0rem 0rem 0.5rem;
+    background-color: rgba(255, 230, 0, 0.44);
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+#translate-btn {
+    padding: 0.5rem;
+    font-size: larger;
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+footer {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clear: both;
+    /* margin-top: auto; */
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+footer a {
+    text-decoration: none;
 }
