@@ -1,16 +1,14 @@
 var translateButton = document.querySelector("#translate-btn")
 var inputText = document.querySelector("#inputText")
-
+var outputDiv = document.querySelector(".output")
 
 translateButton.addEventListener("click",clickEventHandler)
+
+
 function clickEventHandler(){
     console.log("Clicked")
     console.log("input is", inputText.value)
+    outputDiv.innerText = inputText.value
+
 }
 
-/* 
-    1."textarea"
-    2.".btn-primary"
-    3."#input-btn"
-    4."input[name='translator']"
-*/

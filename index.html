@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana Speak</title>
-    <style src="/style.css"></style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <textarea  id="inputText" cols="30" rows="10"></textarea>
-    <button id="translate-btn">Translate🍌</button>
-    <script src="/script.js"></script>
+    <nav>
+        <h1>Banana Speak</h1>
+    </nav>
+    <section class="container container-center">
+        <textarea  id="inputText" placeholder="Enter your text here and click on translate button and it will be converted to minion language" cols="30" rows="10"></textarea>
+        <button id="translate-btn">Translate🍌</button>
+        <p>Translated Output will be displayed here👇</p>
+        <div class="output"></div>
+        <script src="/script.js"></script>
+    </section>
 </body>
 </html>
