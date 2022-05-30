@@ -8,22 +8,13 @@ translateButton.addEventListener("click",clickEventHandler)
 
 function clickEventHandler(){
     console.log("Clicked")
-    // outputDiv.innerText = inputText.value
+    outputDiv.innerText = inputText.value
     fetch(makingURL())
     .then(response => response.json())
-    .then(json => {
-        var translatedText = json.contents.translated;
-        outputDiv.innerText = translatedText
-    })
-    .catch(errorHandler)
+    .then(json => console.log(json))
 }
 
 function makingURL() {
     var finalURL = (URL + "?text=" + inputText.value);
     return finalURL
-}
-
-function errorHandler(error) {
-    console.log("Error occurred")
-    alert("Something is wrong with the server! Try again later")
 }
