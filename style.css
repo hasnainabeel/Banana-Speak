@@ -4,10 +4,11 @@
     --primary-color: #f4dd48;
     --secondary-color: #f6c616;
 }
-* {
-    box-sizing: border-box;
-    margin: 0px;
-}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
 
 html, body {
     font-family: 'Montserrat', sans-serif;
@@ -18,15 +19,7 @@ html, body {
 }
 
 main {
-    flex-grow: 1;
-}
-
-.container {
-    padding: 0rem 3rem;
-}
-.container-center {
-    max-width: 800px;
-    margin: auto;
+    /* flex-grow: 1; */
 }
 
 nav h1 {
@@ -46,6 +39,25 @@ nav {
 
 p {
     padding: 1rem 0 1rem 0;
+}
+
+.container {
+    padding: 0rem 3rem;
+}
+.container-center {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+.pagewrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 #inputText {
@@ -79,18 +91,18 @@ p {
 }
 
 footer {
-    position: absolute;
     background-color: var(--primary-color);
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
     clear: both;
-    /* margin-top: auto; */
+    margin-top: auto;
     text-align: center;
     padding: 10px 0px 10px 0px;
 }
 
 footer a {
     text-decoration: none;
+    color: black;
 }
