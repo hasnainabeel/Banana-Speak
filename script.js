@@ -1,12 +1,13 @@
 var translateButton = document.querySelector("#translate-btn")
 var inputText = document.querySelector("#inputText")
 var outputDiv = document.querySelector(".output")
-var URL = "https://api.funtranslations.com/translate/minion.json"
+var URL = "https://minionsapi.nabeelhasnain.repl.co/translate/minion.json"
 
 translateButton.addEventListener("click",clickEventHandler)
 
 
 function clickEventHandler(){
+    outputDiv.innerText = "It is translating..."
     fetch(makingURL())
     .then(response => response.json())
     .then(json => {
