@@ -7,7 +7,7 @@
 *, *::before, *::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
  }
 
 html, body {
@@ -16,6 +16,7 @@ html, body {
     background: url(/Images/bananaWallpaper.jpeg) center center fixed no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: #333;
 }
 
 main {
@@ -41,6 +42,10 @@ p {
     padding: 1rem 0 1rem 0;
 }
 
+.information {
+    font-size: large;
+}
+
 .container {
     padding: 0rem 3rem;
 }
@@ -63,7 +68,7 @@ p {
 #inputText {
     width: 100%;
     padding: 0.5rem 0rem 0rem 0.5rem;
-    border: 2px solid black;
+    border: 2px solid #333;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -71,8 +76,13 @@ p {
     font-weight: bolder;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 0.5; /* Firefox */
+}
+
 .output {
-    border: 2px solid black;
+    border: 2px solid #333;
     height: 120px;
     width: 100%;
     font-size: 1rem;
@@ -90,19 +100,58 @@ p {
     margin-top: 1rem;
 }
 
+/* footer */
 footer {
     background-color: var(--primary-color);
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    clear: both;
-    margin-top: auto;
+    padding: 1rem 1rem;
     text-align: center;
-    padding: 10px 0px 10px 0px;
+    color: black;
 }
 
-footer a {
-    text-decoration: none;
+.footer .link {
     color: black;
+}
+
+.footer ul {
+    padding-inline-start: 0px;
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 1.5rem;
+}
+
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+.link {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 1rem 1rem;
+}
+
+/* social icons */
+.social-icon:hover {
+    -webkit-animation:spin 0.4s ease-in-out;
+    -moz-animation:spin 0.4s ease-in-out;
+    animation:spin 0.4s ease-in-out;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }
